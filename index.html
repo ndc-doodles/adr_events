@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADR EVENTS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  rel="stylesheet"
+/>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .slider-bg {
+        background-size: cover;
+        background-position: center;
+      }
+      .zoom {
+        animation: zoomInOut 5s ease-in-out forwards;
+      }
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+
+      .marquee-container {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+      }
+
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee 40s linear infinite;
+      }
+
+      .marquee-content {
+        display: flex;
+      }
+
+      .logo {
+        height: 5rem; /* Adjust size if needed */
+        width: auto;
+        margin: 0 2rem;
+        flex-shrink: 0;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes vibrate {
+        0% {
+          transform: translate(0);
+        }
+        20% {
+          transform: translate(-1px, 1px);
+        }
+        40% {
+          transform: translate(-1px, -1px);
+        }
+        60% {
+          transform: translate(1px, 1px);
+        }
+        80% {
+          transform: translate(1px, -1px);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      #logoSlider {
+        animation: slide 30s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="">
+    <!-- Navbar -->
+
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50   backdrop-blur shadow bg-white">
+  <div class="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#home" class="flex items-center space-x-2">
+      <img src="./assets/images/logo (2).png" alt="ADR Events Logo" class="h-16" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium tracking-wide">
+      <a href="#home" class="hover:text-purple-700">HOME</a>
+      <a href="#about" class="hover:text-purple-700 flex items-center gap-1">
+        ABOUT 
+      </a>
+      <a href="#services" class="hover:text-purple-700 flex items-center gap-1 ">
+        SERVICES 
+      </a>
+      <a href="#gallery" class="hover:text-purple-700 flex items-center gap-1 font-semibold">
+        GALLERY 
+      </a>
+      <a href="#contact" class="hover:text-purple-700 font-semibold">CONTACT US</a>
+    </nav>
+
+    <!-- Call Button (Desktop) -->
+    <a
+      href="tel:+918590010011"
+      class="hidden md:flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition"
+    >
+      <i class="fas fa-phone-alt text-white"></i> +91 7559064500
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="md:hidden text-purple-600 text-2xl"
+      onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobileMenu"
+    class="md:hidden bg-white shadow-lg hidden px-6 pb-6 pt-4 transition-all"
+  >
+    <a href="#home" class="block py-2 text-gray-800 hover:text-purple-700">Home</a>
+    <a href="#about" class="block py-2 text-gray-800 hover:text-purple-700">About</a>
+    <a href="#services" class="block py-2 text-gray-800 hover:text-purple-700">Services</a>
+    <a href="#venues" class="block py-2 text-gray-800 hover:text-purple-700">Venues</a>
+    <a href="#gallery" class="block py-2 text-gray-800 hover:text-purple-700">Gallery</a>
+    <a href="#contact" class="block py-2 text-purple-700 font-semibold">Contact Us</a>
+    <a
+      href="tel:+918590010011"
+      class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition"
+    >
+      <i class="fas fa-phone-alt text-white"></i> +91-859-001-0011
+    </a>
+  </div>
+</header>
+
+
+    <!-- Hero Section with Slider -->
+    <section id="home" class="relative w-full h-screen overflow-hidden pt-20">
+      <div id="slider" class="absolute inset-0 slider-bg"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div
+        class="relative z-10 flex flex-col justify-center text-white h-full px-6 md:px-40 text-left"
+      >
+        <p class="text-base md:text-lg uppercase tracking-wide">
+          Kerala's Exclusive Event Company
+        </p>
+        <h2
+          class="text-4xl md:text-7xl font-light leading-tight mt-4 text-white"
+        >
+          Partner with ADR Event<br />Management in Kerala
+        </h2>
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <a
+            href="#contact"
+            class="bg-purple-600 px-6 py-3 rounded-full text-white hover:bg-purple-700 transition"
+            >Contact Us</a
+          >
+          <div class="text-sm flex items-center gap-1">
+            <img
+              src="./assets/images/image3.jpg"
+              class="w-8 h-8 rounded-full border-2 border-white"
+            />
+            <span class="ml-2 text-yellow-400 font-medium">4.8/5 Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section  class="py-20 px-4 text-center bg-white">
+      <h2
+        class="text-2xl md:text-4xl font-light text-black mb-6 tracking-wide"
+        data-aos="fade-up"
+      >
+        EVENT MANAGEMENT COMPANY IN KERALA
+      </h2>
+
+      <p
+        class="max-w-3xl mx-auto text-black text-sm md:text-lg leading-relaxed font-light "
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Have you ever dreamed of planning the perfect event that will be
+        remembered forever? Look no further than ADR Events, the top-notch event
+        management company in Kerala, India, that has everything you need to
+        make your occasion an unforgettable experience. We make everything from
+        corporate event planning and personal celebrations to even small
+        customized event packages absolutely memorable! Contact us today to
+        learn more about our services and how we can help you organize the top
+        event management in Kerala.
+      </p>
+
+      <div
+        class="mt-10 flex justify-center"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        <svg
+          width="200"
+          height="20"
+          viewBox="0 0 200 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="0"
+            y1="10"
+            x2="85"
+            y2="10"
+            stroke="#B0892B"
+            stroke-width="1.5"
+          />
+          <polygon points="95,10 100,5 105,10 100,15" fill="#B0892B" />
+          <line
+            x1="115"
+            y1="10"
+            x2="200"
+            y2="10"
+            stroke="#B0892B"
+            stroke-width="1.5"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- client section -->
+
+    <section id="clients" class="py-20 bg-white">
+      <div class="mb-16 text-center">
+        <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
+          Our Trusted Clients
+        </h2>
+        <p class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto tracking-wide">
+          We proudly collaborate with these brands to bring unforgettable
+          experiences to life.
+        </p>
+      </div>
+
+      <!-- Marquee Container -->
+      <div
+        class="marquee-container overflow-hidden relative max-w-7xl mx-auto mt-14"
+      >
+        <div class="marquee-track flex w-max animate-marquee">
+          <!-- First batch of logos -->
+          <div class="flex sm:gap-12 gap-2 items-center">
+            <img
+              src="./assets/images/tvs_logo_startuptalky.png"
+              alt="TVS"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/leyland.jpg"
+              alt="Leyland"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/JCB-Logo.jpg"
+              alt="JCB"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/Royal Enfield.jpg"
+              alt="Royal Enfield"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/Nestle-Logo.jpg"
+              alt="Nestle"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/SBI Securities Ltd.jpeg.jpg"
+              alt="SBI"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/Vishal Mega Mart.jpg"
+              alt="SBI"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/IDP-Education.jpg"
+              alt="SBI"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+          </div>
+
+          <!-- Duplicate for seamless scroll -->
+          <div class="flex gap-12 items-center ml-12">
+            <img
+              src="./assets/images/tvs_logo_startuptalky.png"
+              alt="TVS"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/leyland.jpg"
+              alt="Leyland"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/JCB-Logo.jpg"
+              alt="JCB"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/Royal Enfield.jpg"
+              alt="Royal Enfield"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/Nestle-Logo.jpg"
+              alt="Nestle"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/SBI Securities Ltd.jpeg.jpg"
+              alt="SBI"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/Vishal Mega Mart.jpg"
+              alt="SBI"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+            <img
+              src="./assets/images/IDP-Education.jpg"
+              alt="SBI"
+              class="logo sm:w-32 w-12 h-auto"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-12 flex justify-center"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        <svg
+          width="200"
+          height="20"
+          viewBox="0 0 200 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="0"
+            y1="10"
+            x2="85"
+            y2="10"
+            stroke="#03045E"
+            stroke-width="1.5"
+          />
+          <polygon points="95,10 100,5 105,10 100,15" fill="#03045E" />
+          <line
+            x1="115"
+            y1="10"
+            x2="200"
+            y2="10"
+            stroke="#03045E"
+            stroke-width="1.5"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-[#e7e6e2] overflow-hidden">
+      <div class="max-w-7xl mx-auto overflow-hidden" data-aos="fade-up">
+        <!-- Heading -->
+        <div class="mb-16 text-center">
+          <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
+            About ADR Events
+          </h2>
+          <p class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto tracking-wide">
+            More than just events — we create experiences that amplify your
+            brand.
+          </p>
+        </div>
+
+        <!-- Stats Row -->
+
+        <!-- new countings -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center mb-20"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <!-- Years of Experience -->
+          <div class="transition-transform hover:-translate-y-1 duration-300">
+            <h3
+              class="counter text-5xl font-semibold text-gray-800"
+              data-target="10"
+            >
+              0
+            </h3>
+            <p class="mt-2 text-gray-600 tracking-wide">Years of Experience</p>
+          </div>
+
+          <!-- Events Delivered -->
+          <div class="transition-transform hover:-translate-y-1 duration-300">
+            <h3
+              class="counter text-5xl font-semibold text-gray-800"
+              data-target="1000"
+            >
+              0
+            </h3>
+            <p class="mt-2 text-gray-600">Successful Events Delivered</p>
+          </div>
+
+          <!-- Clients Served -->
+          <div class="transition-transform hover:-translate-y-1 duration-300">
+            <h3
+              class="counter text-5xl font-semibold text-gray-800"
+              data-target="500"
+            >
+              0
+            </h3>
+            <p class="mt-2 text-gray-600">Clients Served</p>
+          </div>
+
+          <!-- Customer Rating -->
+          <div class="transition-transform hover:-translate-y-1 duration-300">
+            <h3
+              class="counter text-5xl font-semibold text-gray-800"
+              data-target="4.8"
+            >
+              0
+            </h3>
+            <p class="mt-2 text-gray-600">Customer Rating</p>
+          </div>
+        </div>
+
+        <!-- Company Info Section -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <img
+              src="./assets/images/team.jpg"
+              alt="Team Working"
+              class="rounded-xl shadow-xl w-full"
+            />
+          </div>
+          <div data-aos="fade-left">
+            <div class="space-y-6 text-gray-700 md:text-lg text-sm leading-relaxed">
+              <p>
+                At ADR Events, our aim is to enhance experiences and fortify
+                brands by providing outstanding service and paying close
+                attention to every little detail. With over a decade of industry
+                expertise, we have built a reputation for excellence in
+                catering, event management, and promotional activities.
+              </p>
+              <p>
+                We are a preferred partner for events and brand activations of
+                all sizes because of our dedication to quality, creativity, and
+                dependability, which has won us the trust of clients in a
+                variety of industries.
+              </p>
+              <p>
+                We are a committed group of experts who are passionate about
+                developing memorable brand experiences. We have developed into a
+                reputable brand in event management and promotional solutions
+                since we began our journey in 2014.
+              </p>
+              <p>
+                With more than a decade of experience, we have proudly served
+                more than 200 clients in a variety of industries and
+                successfully finished more than 500 Events. Our work
+                demonstrates a strong dedication to excellence, originality, and
+                flawless execution.
+              </p>
+              <p>
+                We put our clients first by learning about their objectives,
+                providing specialized solutions, and carefully carrying out each
+                campaign to guarantee a long-lasting brand impact.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-white py-24 px-6 tracking-wide">
+      <div class="max-w-7xl mx-auto" data-aos="fade-up">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
+            What We Offer
+          </h2>
+          <p class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto tracking-wide">
+            Delivering impactful and innovative event & promotional solutions.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+          <!-- Card Start -->
+          <div
+            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="mb-6 overflow-hidden rounded-xl">
+              <img
+                src="./assets/images/car show.jpg"
+                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
+              />
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Product Launches
+            </h4>
+            <p class="text-gray-600 text-center">
+              Buzz-worthy events to give your product the spotlight it deserves.
+            </p>
+          </div>
+          <!-- Card End -->
+
+          <div
+            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="mb-6 overflow-hidden rounded-xl">
+              <img
+                src="./assets/images/promo4.jpg"
+                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
+              />
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Brand Activation
+            </h4>
+            <p class="text-gray-600 text-center">
+              Interactive campaigns in malls, markets, and public spaces.
+            </p>
+          </div>
+
+          <div
+            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="mb-6 overflow-hidden rounded-xl">
+              <img
+                src="./assets/images/stafs.jpg"
+                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
+              />
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Promoters & Staffing
+            </h4>
+            <p class="text-gray-600 text-center">
+              Male/female promoters & MCs to elevate your brand presence.
+            </p>
+          </div>
+
+          <div
+            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div class="mb-6 overflow-hidden rounded-xl">
+              <img
+                src="./assets/images/compliance.jpg"
+                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
+              />
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Logistics & Compliance
+            </h4>
+            <p class="text-gray-600 text-center">
+              We handle transport, permissions, and event setup end-to-end.
+            </p>
+          </div>
+
+          <div
+            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            <div class="mb-6 overflow-hidden rounded-xl">
+              <img
+                src="./assets/images/roadshow.jpg"
+                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
+              />
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Roadshow Branding
+            </h4>
+            <p class="text-gray-600 text-center">
+              Look Walkers, LED Vans & mobile campaigns that drive impact.
+            </p>
+          </div>
+
+          <div
+            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+          >
+            <div class="mb-6 overflow-hidden rounded-xl">
+              <img
+                src="./assets/images/promo5.jpg"
+                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
+              />
+            </div>
+            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Auto Branding
+            </h4>
+            <p class="text-gray-600 text-center">
+              Turn vehicles into moving advertisements with stunning wraps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Gallery Section -->
+    <div class="w-full h-6" id="gallery" ></div>
+    <section  class="py-20 px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
+          Gallery
+        </h2>
+
+        <p
+          class="md:text-lg text-sm text-gray-700 text-center mt-4 max-w-2xl mx-auto tracking-wide"
+        >
+          Explore moments captured from our events, showcasing the energy,
+          creativity, and flawless execution that define ADR EVENTS. Each frame
+          tells the story of our passion and commitment to delivering
+          unforgettable experiences.
+        </p>
+      </div>
+      <div
+        class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+        data-aos="zoom-in"
+      >
+        <!-- Image Card Start -->
+        <div class="relative overflow-hidden rounded-xl shadow group h-[350px]">
+          <img
+            src="./assets/images/eve5.jpg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl shadow group h-[350px]">
+          <img
+            src="./assets/images/eve7.jpg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl shadow group h-[350px]">
+          <img
+            src="./assets/images/eve11.jpg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl shadow group h-[350px]">
+          <img
+            src="./assets/images/eve9.jpg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl shadow group h-[350px]">
+          <img
+            src="./assets/images/eve4.jpg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl shadow group h-[350px]">
+          <img
+            src="./assets/images/eve3.jpg"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+     <div class="w-full h-6" id="contact" ></div>
+    <section  class="bg-white py-20 px-6 overflow-hidden">
+      <div class="text-center mb-16 overflow-hidden">
+        <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
+          Contact Us
+        </h2>
+
+        <p
+          class="md:text-lg text-sm text-gray-700 text-center mt-4 max-w-2xl mx-auto tracking-wide"
+        >
+          We welcome the opportunity to discuss how we can contribute to your
+          next event or brand initiative.
+        </p>
+      </div>
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start"
+      >
+        
+        <div class="space-y-8 text-left" data-aos="fade-right">
+          
+          <img src="./assets/images/logo.jpg" alt="ADR Logo" class="h-14" />
+
+          
+          <h2 class="text-2xl md:text-3xl font-bold text-black">
+            WANT TO WORK WITH US?
+          </h2>
+
+          
+          <div class="flex items-start gap-4">
+            <img
+              src="./assets/images/call.png"
+              alt="Phone Icon"
+              class="h-8 w-8 mt-1"
+            />
+            <div>
+              <p class="uppercase text-sm tracking-wide text-gray-600">
+                Talk to our client support team
+              </p>
+              <p class="text-xl font-semibold text-black">+91 7559064500</p>
+            </div>
+          </div>
+
+         
+          <div class="flex items-start gap-4">
+            <img
+              src="./assets/images/email.png"
+              alt="Email Icon"
+              class="h-8 w-8 mt-1"
+            />
+            <div>
+              <p class="uppercase text-sm tracking-wide text-gray-600">
+                Write to us about your needs
+              </p>
+              <p class="text-md font-semibold text-black">
+                santosh@adrevent.com
+              </p>
+            </div>
+          </div>
+
+          
+          <div class="flex items-center gap-4 mt-4">
+            <a href="#" target="_blank">
+              <img
+                src="./assets/images/instagram.png"
+                alt="Instagram"
+                class="h-8 w-8 hover:scale-110 transition"
+              />
+            </a>
+            <a href="#" target="_blank">
+              <img
+                src="./assets/images/whatsapp (1).png"
+                alt="YouTube"
+                class="h-8 w-8 hover:scale-110 transition"
+              />
+            </a>
+            <a href="#" target="_blank">
+              <img
+                src="./assets/images/facebook.jpg"
+                alt="Facebook"
+                class="h-8 w-8 hover:scale-110 transition"
+              />
+            </a>
+
+            <a href="#" target="_blank">
+              <img
+                src="./assets/images/twitter.png"
+                alt="Twitter"
+                class="h-8 w-8 hover:scale-110 transition"
+              />
+            </a>
+          </div>
+        </div>
+
+        
+        <div class="w-full" data-aos="fade-left">
+          <form class="space-y-4">
+            <input
+              type="text"
+              placeholder="Enter your Full Name"
+              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9c27b0]"
+            />
+            <input
+              type="tel"
+              placeholder="Enter your Phone Number"
+              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9c27b0]"
+            />
+            <input
+              type="email"
+              placeholder="Enter your Email ID"
+              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9c27b0]"
+            />
+            <textarea
+              placeholder="Message"
+              rows="4"
+              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9c27b0]"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-[#673ab7] text-white font-semibold py-2 px-6 rounded-md hover:bg-[#5e35b1] transition duration-300"
+            >
+              SUBMIT
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-[#fffaf0] text-gray-800 py-14 px-6 tracking-wide">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- Logo + About -->
+    <div>
+      <img src="./assets/images/logo (2).png" alt="ADR Events Logo" class="h-12 mb-4">
+      <p class="md:text-lg text-sm leading-relaxed text-gray-600">
+        ADR Events crafts unforgettable brand moments with precision, creativity, and passion for perfection.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div>
+      <h4 class="text-lg font-semibold mb-4 text-[#c5a14d]">Quick Links</h4>
+      <ul class="space-y-2 md:text-lg text-sm">
+        <li><a href="#home" class="hover:text-[#9b7d2c] transition">Home</a></li>
+        <li><a href="#about" class="hover:text-[#9b7d2c] transition">About</a></li>
+        <li><a href="#services" class="hover:text-[#9b7d2c] transition">Services</a></li>
+        <li><a href="#gallery" class="hover:text-[#9b7d2c] transition">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-[#9b7d2c] transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info with Images -->
+    <div>
+      <h4 class="text-xl font-semibold mb-4 text-[#c5a14d]">Contact Us</h4>
+      <ul class="space-y-4 md:text-lg text-sm text-gray-700">
+        <li class="flex items-start gap-3">
+          <span>
+            <strong>Downtown:</strong><br>
+            Metro Pillar No.688, Near Shenoy’s<br>
+            M.G. Road, Ernakulam - 682035
+          </span>
+        </li>
+
+        <li class="flex items-start gap-3">
+
+          <span>
+            <strong>Godown:</strong><br>
+            63/353 Kaloor Kadavanthra Road<br>
+            Cochin - 682017
+          </span>
+        </li>
+
+        <li class="flex items-center gap-3">
+          <img src="./assets/images/call.png" alt="Phone" class="w-5 h-5">
+          <a href="tel:+917559064500" class="text-[#9b7d2c] hover:underline">+91 7559064500</a>
+        </li>
+
+        <li class="flex items-center gap-3">
+          <img src="./assets/images/email.png" alt="Email" class="w-5 h-5">
+          <a href="mailto:santosh@adrevent.com" class="text-[#9b7d2c] hover:underline">santosh@adrevent.com</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Social Media with Images -->
+    <div>
+      <h4 class="text-xl font-semibold mb-4 text-[#c5a14d]">Follow Us</h4>
+      <div class="flex gap-4 items-center">
+        <a href="#" target="_blank">
+          <img src="./assets/images/instagram.png" alt="Instagram" class="w-7 h-7 hover:scale-110 transition">
+        </a>
+        <a href="#" target="_blank">
+          <img src="./assets/images/facebook.jpg" alt="Facebook" class="w-7 h-7 hover:scale-110 transition">
+        </a>
+        <a href="#" target="_blank">
+          <img src="./assets/images/whatsapp (1).png" alt="LinkedIn" class="w-7 h-7 hover:scale-110 transition">
+        </a>
+        <a href="#" target="_blank">
+          <img src="./assets/images/twitter.png" alt="Twitter" class="w-7 h-7 hover:scale-110 transition">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-[#e2d8bc] mt-12 pt-6 text-center text-sm text-gray-500">
+    © 2025 CYBEXEL PVT LTD. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+
+    <!-- Slider Script -->
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
