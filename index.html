@@ -27,6 +27,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+
+    <!-- Swiper CSS -->
+<!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/> -->
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -114,7 +125,7 @@
       }
     </style>
   </head>
-  <body class="">
+  <body >
     <!-- Navbar -->
 
     <!-- Header -->
@@ -133,7 +144,7 @@
 
         <!-- Desktop Navigation -->
         <nav
-          class="hidden md:flex items-center space-x-6 text-sm font-thin text-black"
+          class="hidden md:flex items-center space-x-6 text-sm font-medium text-black"
         >
           <a href="#home" class="hover:text-[#016db7] " style="font-family: 'Montserrat', sans-serif;">HOME</a>
           <a
@@ -169,7 +180,7 @@
 
         <!-- Mobile Menu Button -->
         <button
-          class="md:hidden text-purple-600 text-2xl"
+          class="md:hidden text-black text-2xl"
           onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
         >
           <i class="fas fa-bars"></i>
@@ -216,11 +227,11 @@
       <div
         class="relative z-10 flex flex-col justify-center text-white h-full px-6 md:px-40 text-left"
       >
-        <p class="text-base md:text-lg uppercase " style="font-family: 'Michroma', sans-serif;">
+        <p class="text-base md:text-lg uppercase " style="font-family: 'Philosopher', serif">
           Kerala's Exclusive Event Company
         </p>
         <h2
-          class="text-4xl md:text-6xl font-light leading-tight mt-4 text-white" style="font-family: 'Michroma', sans-serif;"
+          class="text-4xl md:text-6xl font-light leading-tight mt-4 text-white" style="font-family: 'Philosopher', serif"
         >
           Partner with ADR Event<br />Management in Kerala
         </h2>
@@ -230,13 +241,7 @@
             class="bg-[#016db7] px-6 py-3 rounded-full text-white hover:bg-purple-700 transition"
             >Contact Us</a
           >
-          <div class="text-sm flex items-center gap-1">
-            <img
-              src="./assets/images/image3.jpg"
-              class="w-8 h-8 rounded-full border-2 border-white"
-            />
-            <span class="ml-2 text-yellow-400 font-medium">4.8/5 Rating</span>
-          </div>
+
         </div>
       </div>
     </section>
@@ -509,7 +514,7 @@
       </div>
     </section>
 
-    <section id="about" class="py-24 px-6 bg-[#e7e6e2] overflow-hidden">
+    <section id="about" class="py-24 px-6 bg-gradient-to-r from-blue-50  to-blue-100 overflow-hidden">
       <div class="max-w-7xl mx-auto overflow-hidden" data-aos="fade-up">
         <!-- Heading -->
         <div
@@ -604,7 +609,7 @@
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right">
             <img
-              src="./assets/images/team.jpg"
+              src="./assets/images/eve2.jpg"
               alt="Team Working"
               class="rounded-xl shadow-xl w-full"
             />
@@ -614,37 +619,16 @@
               style="font-family: 'Playfair Display', serif"
               class="space-y-6 text-gray-900 md:text-lg text-sm leading-relaxed italic"
             >
-              <p>
-                At ADR Events, our aim is to enhance experiences and fortify
-                brands by providing outstanding service and paying close
-                attention to every little detail. With over a decade of industry
-                expertise, we have built a reputation for excellence in
-                catering, event management, and promotional activities.
-              </p>
-              <p>
-                We are a preferred partner for events and brand activations of
-                all sizes because of our dedication to quality, creativity, and
-                dependability, which has won us the trust of clients in a
-                variety of industries.
-              </p>
-              <p>
-                We are a committed group of experts who are passionate about
-                developing memorable brand experiences. We have developed into a
-                reputable brand in event management and promotional solutions
-                since we began our journey in 2014.
-              </p>
-              <p>
-                With more than a decade of experience, we have proudly served
-                more than 200 clients in a variety of industries and
-                successfully finished more than 500 Events. Our work
-                demonstrates a strong dedication to excellence, originality, and
-                flawless execution.
-              </p>
-              <p>
-                We put our clients first by learning about their objectives,
-                providing specialized solutions, and carefully carrying out each
-                campaign to guarantee a long-lasting brand impact.
-              </p>
+             <p>
+  At ADR Events, we elevate brand experiences through top-tier service and keen attention to detail. With over a decade of industry expertise since 2014, we've delivered 500+ events for 200+ happy clients.
+</p>
+<p>
+  Our passion for creativity, precision, and reliability has made us a trusted partner across industries. From catering and promotions to full-scale event management, we bring every campaign to life with excellence.
+</p>
+<p>
+  By understanding our clients’ goals, we deliver tailored solutions that leave lasting impressions.
+</p>
+
             </div>
           </div>
         </div>
@@ -667,166 +651,108 @@
             Delivering impactful and innovative event & promotional solutions.
           </p>
         </div>
+        <!-- Card Start -->
 
-        <div class="grid md:grid-cols-3 gap-10">
-          <!-- Card Start -->
-          <div
-            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <div class="mb-6 overflow-hidden rounded-xl">
-              <img
-                src="./assets/images/productdisplay.jpg"
-                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
-              />
-            </div>
-            <h4
-              class="text-xl font-bold text-gray-800 mb-2 text-center"
-              style="font-family: 'Raleway', serif"
-            >
-              Product Launches
-            </h4>
-            <p
-              class="text-gray-600 text-center"
-              style="font-family: 'Playfair Display', serif"
-            >
-              Buzz-worthy events to give your product the spotlight it deserves.
-            </p>
+<section class=" py-12">
+  <div class="swiper mySwiper max-w-7xl mx-auto px-4 relative">
+    <div class="swiper-wrapper">
+
+      <!-- CARD 1 -->
+      <div class="swiper-slide flex justify-center">
+        <div class="w-72 h-[420px] bg-gradient-to-r from-blue-50  to-blue-100 rounded-3xl overflow-hidden shadow-2xl group">
+          <div class="h-2/3 w-full overflow-hidden">
+            <img src="./assets/images/productdisplay.jpg" class="w-full h-full object-fit transition duration-500 group-hover:scale-105" />
           </div>
-          <!-- Card End -->
-
-          <div
-            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <div class="mb-6 overflow-hidden rounded-xl">
-              <img
-                src="./assets/images/branding activation.jpg"
-                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
-              />
-            </div>
-            <h4
-              class="text-xl font-bold text-gray-800 mb-2 text-center"
-              style="font-family: 'Raleway', serif"
-            >
-              Brand Activation
-            </h4>
-            <p
-              class="text-gray-600 text-center"
-              style="font-family: 'Playfair Display', serif"
-            >
-              Interactive campaigns in malls, markets, and public spaces.
-            </p>
-          </div>
-
-          <div
-            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
-            <div class="mb-6 overflow-hidden rounded-xl">
-              <img
-                src="./assets/images/support.jpg"
-                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
-              />
-            </div>
-            <h4
-              class="text-xl font-bold text-gray-800 mb-2 text-center"
-              style="font-family: 'Raleway', serif"
-            >
-              Promoters & Staffing
-            </h4>
-            <p
-              class="text-gray-600 text-center"
-              style="font-family: 'Playfair Display', serif"
-            >
-              Male/female promoters & MCs to elevate your brand presence.
-            </p>
-          </div>
-
-          <div
-            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            <div class="mb-6 overflow-hidden rounded-xl">
-              <img
-                src="./assets/images/compliance.jpg"
-                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
-              />
-            </div>
-            <h4
-              class="text-xl font-bold text-gray-800 mb-2 text-center"
-              style="font-family: 'Raleway', serif"
-            >
-              Logistics & Compliance
-            </h4>
-            <p
-              class="text-gray-600 text-center"
-              style="font-family: 'Playfair Display', serif"
-            >
-              We handle transport, permissions, and event setup end-to-end.
-            </p>
-          </div>
-
-          <div
-            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="500"
-          >
-            <div class="mb-6 overflow-hidden rounded-xl">
-              <img
-                src="./assets/images/roadshow.jpg"
-                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
-              />
-            </div>
-            <h4
-              class="text-xl font-bold text-gray-800 mb-2 text-center"
-              style="font-family: 'Raleway', serif"
-            >
-              Roadshow Branding
-            </h4>
-            <p
-              class="text-gray-600 text-center"
-              style="font-family: 'Playfair Display', serif"
-            >
-              Look Walkers, LED Vans & mobile campaigns that drive impact.
-            </p>
-          </div>
-
-          <div
-            class="group relative bg-[#e7e6e2] p-8 border rounded-2xl shadow hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-            data-aos="zoom-in"
-            data-aos-delay="600"
-          >
-            <div class="mb-6 overflow-hidden rounded-xl">
-              <img
-                src="./assets/images/promo5.jpg"
-                class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
-              />
-            </div>
-            <h4
-              class="text-xl font-semibold text-gray-800 mb-2 text-center"
-              style="font-family: 'Raleway', serif"
-            >
-              Auto Branding
-            </h4>
-            <p
-              class="text-gray-600 text-center"
-              style="font-family: 'Playfair Display', serif"
-            >
-              Turn vehicles into moving advertisements with stunning wraps.
-            </p>
+          <div class="h-1/3 p-4 flex flex-col justify-center items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800" style="font-family: 'Raleway', serif;">Product Launches</h3>
+            <p class="text-sm text-gray-600 mt-1" style="font-family: 'Playfair Display', serif;">Buzz-worthy events to give your product the spotlight it deserves.</p>
           </div>
         </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="swiper-slide flex justify-center">
+        <div class="w-72 h-[420px] bg-gradient-to-r from-blue-50  to-blue-100 rounded-3xl overflow-hidden shadow-2xl group">
+          <div class="h-2/3 w-full overflow-hidden">
+            <img src="./assets/images/branding activation.jpg" class="w-full h-full object-fit transition duration-500 group-hover:scale-105" />
+          </div>
+          <div class="h-1/3 p-4 flex flex-col justify-center items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800" style="font-family: 'Raleway', serif;">Brand Activation</h3>
+            <p class="text-sm text-gray-600 mt-1" style="font-family: 'Playfair Display', serif;">Interactive campaigns in malls, markets, and public spaces.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="swiper-slide flex justify-center">
+        <div class="w-72 h-[420px] bg-gradient-to-r from-blue-50  to-blue-100 rounded-3xl overflow-hidden shadow-2xl group">
+          <div class="h-2/3 w-full overflow-hidden">
+            <img src="./assets/images/support.jpg" class="w-full h-full object-fit transition duration-500 group-hover:scale-105" />
+          </div>
+          <div class="h-1/3 p-4 flex flex-col justify-center items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800" style="font-family: 'Raleway', serif;">Promoters & Staffing</h3>
+            <p class="text-sm text-gray-600 mt-1" style="font-family: 'Playfair Display', serif;">Male/female promoters & MCs to elevate your brand presence.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="swiper-slide flex justify-center">
+        <div class="w-72 h-[420px] bg-gradient-to-r from-blue-50  to-blue-100 rounded-3xl overflow-hidden shadow-2xl group">
+          <div class="h-2/3 w-full overflow-hidden">
+            <img src="./assets/images/compliance.jpg" class="w-full h-full object-fit transition duration-500 group-hover:scale-105" />
+          </div>
+          <div class="h-1/3 p-4 flex flex-col justify-center items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800" style="font-family: 'Raleway', serif;">Logistics & Compliance</h3>
+            <p class="text-sm text-gray-600 mt-1" style="font-family: 'Playfair Display', serif;">We handle transport, permissions, and event setup end-to-end.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="swiper-slide flex justify-center">
+        <div class="w-72 h-[420px] bg-gradient-to-r from-blue-50  to-blue-100 rounded-3xl overflow-hidden shadow-2xl group">
+          <div class="h-2/3 w-full overflow-hidden">
+            <img src="./assets/images/roadshow.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+          </div>
+          <div class="h-1/3 p-4 flex flex-col justify-center items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800" style="font-family: 'Raleway', serif;">Roadshow Branding</h3>
+            <p class="text-sm text-gray-600 mt-1" style="font-family: 'Playfair Display', serif;">Look Walkers, LED Vans & mobile campaigns that drive impact.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="swiper-slide flex justify-center">
+        <div class="w-72 h-[420px] bg-gradient-to-r from-blue-50  to-blue-100 rounded-3xl overflow-hidden shadow-2xl group">
+          <div class="h-2/3 w-full overflow-hidden">
+            <img src="./assets/images/promo5.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+          </div>
+          <div class="h-1/3 p-4 flex flex-col justify-center items-center text-center">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800" style="font-family: 'Raleway', serif;">Auto Branding</h3>
+            <p class="text-sm text-gray-600 mt-1" style="font-family: 'Playfair Display', serif;">Turn vehicles into moving advertisements with stunning wraps.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-prev !text-black md:block hidden"></div>
+    <div class="swiper-button-next !text-black md:block hidden"></div>
+    <div class="swiper-pagination mt-6"></div>
+  </div>
+</section>
+
+
+
+
       </div>
     </section>
 
     <!-- Gallery Section -->
-    <div class="w-full h-6" id="gallery"></div>
-    <section class="py-20 px-6">
+    <div class="w-full h-6 " id="gallery"></div>
+    <section class="py-20 px-6 bg-gradient-to-r from-blue-50  to-blue-100">
       <div
         style="font-family: 'Playfair Display', serif"
         class="text-center mb-16"
@@ -1165,7 +1091,7 @@
         <script>
           document.write(new Date().getFullYear());
         </script>
-        ADR EVENTS. All rights reserved.<br /><br /><br />Designed by CYBEXEL
+        ADR EVENTS. All rights reserved.<br><br>Designed by CYBEXEL
         PVT LTD
       </div>
     </footer>
@@ -1183,5 +1109,6 @@
 
     <!-- Slider Script -->
     <script src="./assets/js/index.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
