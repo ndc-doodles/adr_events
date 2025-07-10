@@ -101,40 +101,22 @@ setInterval(changeSlide, 5000);
 
 
    
-  const swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
+  const swiper = new Swiper('.mySwiper', {
     loop: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 200,
-      modifier: 2.5,
-      slideShadows: false,
-    },
+    grabCursor: true,
     autoplay: {
-      delay: 4000,
+      delay: 3000,
       disableOnInteraction: false,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    spaceBetween: 20,
+    slidesPerView: 1.2,
     breakpoints: {
-      0: {
-        slidesPerView: 1.2,
-      },
-      768: {
-        slidesPerView: 2.2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
+      640: { slidesPerView: 1.5 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
   });
