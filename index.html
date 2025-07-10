@@ -8,9 +8,25 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  rel="stylesheet"
-/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playball&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -101,67 +117,97 @@
   <body class="">
     <!-- Navbar -->
 
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 backdrop-blur shadow bg-white">
+      <div
+        class="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#home" class="flex items-center space-x-2">
+          <img
+            src="./assets/images/logo (2).png"
+            alt="ADR Events Logo"
+            class="h-16"
+          />
+        </a>
 
-<!-- Header -->
-<header class="fixed top-0 w-full z-50   backdrop-blur shadow bg-white">
-  <div class="max-w-7xl mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
-    <!-- Logo -->
-    <a href="#home" class="flex items-center space-x-2">
-      <img src="./assets/images/logo (2).png" alt="ADR Events Logo" class="h-16" />
-    </a>
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden md:flex items-center space-x-6 text-sm font-thin text-black"
+        >
+          <a href="#home" class="hover:text-[#016db7] " style="font-family: 'Montserrat', sans-serif;">HOME</a>
+          <a
+            href="#about"
+            class="hover:text-[#016db7] flex items-center gap-1" style="font-family: 'Montserrat', sans-serif;"
+          >
+            ABOUT
+          </a>
+          <a
+            href="#services"
+            class="hover:text-[#016db7] flex items-center gap-1" style="font-family: 'Montserrat', sans-serif;"
+          >
+            SERVICES
+          </a>
+          <a
+            href="#gallery"
+            class="hover:text-[#016db7] flex items-center gap-1 " style="font-family: 'Montserrat', sans-serif;"
+          >
+            GALLERY
+          </a>
+          <a href="#contact" class="hover:text-[#016db7] " style="font-family: 'Montserrat', sans-serif;"
+            >CONTACT US</a
+          >
+        </nav>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium tracking-wide">
-      <a href="#home" class="hover:text-purple-700">HOME</a>
-      <a href="#about" class="hover:text-purple-700 flex items-center gap-1">
-        ABOUT 
-      </a>
-      <a href="#services" class="hover:text-purple-700 flex items-center gap-1 ">
-        SERVICES 
-      </a>
-      <a href="#gallery" class="hover:text-purple-700 flex items-center gap-1 font-semibold">
-        GALLERY 
-      </a>
-      <a href="#contact" class="hover:text-purple-700 font-semibold">CONTACT US</a>
-    </nav>
+        <!-- Call Button (Desktop) -->
+        <a
+          href="tel:+918590010011"
+          class="hidden md:flex items-center gap-2 bg-gradient-to-r from-[#016db7] to-purple-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition"
+        >
+          <i class="fas fa-phone-alt text-white"></i> +91 7559064500
+        </a>
 
-    <!-- Call Button (Desktop) -->
-    <a
-      href="tel:+918590010011"
-      class="hidden md:flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition"
-    >
-      <i class="fas fa-phone-alt text-white"></i> +91 7559064500
-    </a>
+        <!-- Mobile Menu Button -->
+        <button
+          class="md:hidden text-purple-600 text-2xl"
+          onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
 
-    <!-- Mobile Menu Button -->
-    <button
-      class="md:hidden text-purple-600 text-2xl"
-      onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div
-    id="mobileMenu"
-    class="md:hidden bg-white shadow-lg hidden px-6 pb-6 pt-4 transition-all"
-  >
-    <a href="#home" class="block py-2 text-gray-800 hover:text-purple-700">Home</a>
-    <a href="#about" class="block py-2 text-gray-800 hover:text-purple-700">About</a>
-    <a href="#services" class="block py-2 text-gray-800 hover:text-purple-700">Services</a>
-    <a href="#venues" class="block py-2 text-gray-800 hover:text-purple-700">Venues</a>
-    <a href="#gallery" class="block py-2 text-gray-800 hover:text-purple-700">Gallery</a>
-    <a href="#contact" class="block py-2 text-purple-700 font-semibold">Contact Us</a>
-    <a
-      href="tel:+918590010011"
-      class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition"
-    >
-      <i class="fas fa-phone-alt text-white"></i> +91-859-001-0011
-    </a>
-  </div>
-</header>
-
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="md:hidden bg-white shadow-lg hidden px-6 pb-6 pt-4 transition-all"
+      >
+        <a href="#home" class="block py-2 text-gray-800 hover:text-[#016db7]" style="font-family: 'Michroma', sans-serif;"
+          >Home</a
+        >
+        <a href="#about" class="block py-2 text-gray-800 hover:text-[#016db7]" style="font-family: 'Michroma', sans-serif;"
+          >About</a
+        >
+        <a
+          href="#services"
+          class="block py-2 text-gray-800 hover:text-[#016db7]" style="font-family: 'Michroma', sans-serif;"
+          >Services</a
+        >
+        <a
+          href="#gallery"
+          class="block py-2 text-gray-800 hover:text-[#016db7]" style="font-family: 'Michroma', sans-serif;"
+          >Gallery</a
+        >
+        <a href="#contact" class="block py-2 hover:text-[#016db7] font-semibold" style="font-family: 'Michroma', sans-serif;"
+          >Contact Us</a
+        >
+        <a
+          href="tel:+918590010011"
+          class="mt-4 inline-flex items-center gap-2 bg-gradient-to-r from-[#016db7] to-purple-500 text-white px-4 py-2 rounded-full font-semibold shadow-md hover:shadow-lg transition"
+        >
+          <i class="fas fa-phone-alt text-white"></i> +91-859-001-0011
+        </a>
+      </div>
+    </header>
 
     <!-- Hero Section with Slider -->
     <section id="home" class="relative w-full h-screen overflow-hidden pt-20">
@@ -170,18 +216,18 @@
       <div
         class="relative z-10 flex flex-col justify-center text-white h-full px-6 md:px-40 text-left"
       >
-        <p class="text-base md:text-lg uppercase tracking-wide">
+        <p class="text-base md:text-lg uppercase " style="font-family: 'Michroma', sans-serif;">
           Kerala's Exclusive Event Company
         </p>
         <h2
-          class="text-4xl md:text-7xl font-light leading-tight mt-4 text-white"
+          class="text-4xl md:text-6xl font-light leading-tight mt-4 text-white" style="font-family: 'Michroma', sans-serif;"
         >
           Partner with ADR Event<br />Management in Kerala
         </h2>
         <div class="mt-6 flex flex-wrap items-center gap-4">
           <a
             href="#contact"
-            class="bg-purple-600 px-6 py-3 rounded-full text-white hover:bg-purple-700 transition"
+            class="bg-[#016db7] px-6 py-3 rounded-full text-white hover:bg-purple-700 transition"
             >Contact Us</a
           >
           <div class="text-sm flex items-center gap-1">
@@ -195,7 +241,7 @@
       </div>
     </section>
 
-    <section  class="py-20 px-4 text-center bg-white">
+    <!-- <section  class="py-20 px-4 text-center bg-white">
       <h2
         class="text-2xl md:text-4xl font-light text-black mb-6 tracking-wide"
         data-aos="fade-up"
@@ -249,16 +295,87 @@
           />
         </svg>
       </div>
-    </section>
+    </section> -->
 
+    <section
+      style="font-family: 'Philosopher', serif"
+      class="py-20 px-4 text-center bg-white"
+    >
+      <h2
+        class="text-2xl md:text-4xl font-light text-black mb-6"
+        data-aos="fade-up"
+      >
+        EVENT MANAGEMENT COMPANY IN KERALA
+      </h2>
+
+      <p
+        class="max-w-4xl mx-auto text-[#000000a8] text-sm md:text-lg leading-relaxed font-thin italic"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Have you ever dreamed of planning the perfect event that will be
+        remembered forever? Look no further than ADR Events, the top-notch event
+        management company in Kerala, India, that has everything you need to
+        make your occasion an unforgettable experience. We make everything from
+        corporate event planning and personal celebrations to even small
+        customized event packages absolutely memorable! Contact us today to
+        learn more about our services and how we can help you organize the top
+        event management in Kerala.
+      </p>
+
+      <div
+        class="mt-10 flex justify-center"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        <svg
+          width="200"
+          height="20"
+          viewBox="0 0 200 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="0"
+            y1="10"
+            x2="85"
+            y2="10"
+            stroke="#B0892B"
+            stroke-width="1.5"
+          />
+          <polygon points="95,10 100,5 105,10 100,15" fill="#B0892B" />
+          <line
+            x1="115"
+            y1="10"
+            x2="200"
+            y2="10"
+            stroke="#B0892B"
+            stroke-width="1.5"
+          />
+        </svg>
+      </div>
+    </section>
     <!-- client section -->
 
     <section id="clients" class="py-20 bg-white">
-      <div class="mb-16 text-center">
+      <!-- <div class="mb-16 text-center">
         <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
           Our Trusted Clients
         </h2>
         <p class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto tracking-wide">
+          We proudly collaborate with these brands to bring unforgettable
+          experiences to life.
+        </p>
+      </div> -->
+
+      <div
+        style="font-family: 'Playfair Display', serif"
+        class="mb-16 text-center"
+      >
+        <h2 class="text-4xl md:text-5xl font-light text-black">
+          Our Trusted Clients
+        </h2>
+        <p class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto">
           We proudly collaborate with these brands to bring unforgettable
           experiences to life.
         </p>
@@ -395,11 +512,16 @@
     <section id="about" class="py-24 px-6 bg-[#e7e6e2] overflow-hidden">
       <div class="max-w-7xl mx-auto overflow-hidden" data-aos="fade-up">
         <!-- Heading -->
-        <div class="mb-16 text-center">
+        <div
+          style="font-family: 'Playfair Display', serif"
+          class="mb-16 text-center"
+        >
           <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
             About ADR Events
           </h2>
-          <p class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto tracking-wide">
+          <p
+            class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto tracking-wide"
+          >
             More than just events — we create experiences that amplify your
             brand.
           </p>
@@ -421,7 +543,12 @@
             >
               0
             </h3>
-            <p class="mt-2 text-gray-600 tracking-wide">Years of Experience</p>
+            <p
+              class="mt-2 text-gray-600 tracking-wide"
+              style="font-family: 'Playfair Display', serif"
+            >
+              Years of Experience
+            </p>
           </div>
 
           <!-- Events Delivered -->
@@ -432,7 +559,12 @@
             >
               0
             </h3>
-            <p class="mt-2 text-gray-600">Successful Events Delivered</p>
+            <p
+              class="mt-2 text-gray-600"
+              style="font-family: 'Playfair Display', serif"
+            >
+              Successful Events Delivered
+            </p>
           </div>
 
           <!-- Clients Served -->
@@ -443,7 +575,12 @@
             >
               0
             </h3>
-            <p class="mt-2 text-gray-600">Clients Served</p>
+            <p
+              class="mt-2 text-gray-600"
+              style="font-family: 'Playfair Display', serif"
+            >
+              Clients Served
+            </p>
           </div>
 
           <!-- Customer Rating -->
@@ -454,7 +591,12 @@
             >
               0
             </h3>
-            <p class="mt-2 text-gray-600">Customer Rating</p>
+            <p
+              class="mt-2 text-gray-600"
+              style="font-family: 'Playfair Display', serif"
+            >
+              Customer Rating
+            </p>
           </div>
         </div>
 
@@ -468,7 +610,10 @@
             />
           </div>
           <div data-aos="fade-left">
-            <div class="space-y-6 text-gray-700 md:text-lg text-sm leading-relaxed">
+            <div
+              style="font-family: 'Playfair Display', serif"
+              class="space-y-6 text-gray-900 md:text-lg text-sm leading-relaxed italic"
+            >
               <p>
                 At ADR Events, our aim is to enhance experiences and fortify
                 brands by providing outstanding service and paying close
@@ -507,13 +652,18 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="bg-white py-24 px-6 tracking-wide">
+    <section id="services" class="bg-white py-24 px-6">
       <div class="max-w-7xl mx-auto" data-aos="fade-up">
-        <div class="text-center mb-16">
+        <div
+          style="font-family: 'Playfair Display', serif"
+          class="text-center mb-16"
+        >
           <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
             What We Offer
           </h2>
-          <p class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto tracking-wide">
+          <p
+            class="mt-4 md:text-lg text-sm text-gray-700 max-w-2xl mx-auto tracking-wide"
+          >
             Delivering impactful and innovative event & promotional solutions.
           </p>
         </div>
@@ -527,14 +677,20 @@
           >
             <div class="mb-6 overflow-hidden rounded-xl">
               <img
-                src="./assets/images/car show.jpg"
+                src="./assets/images/productdisplay.jpg"
                 class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
               />
             </div>
-            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            <h4
+              class="text-xl font-bold text-gray-800 mb-2 text-center"
+              style="font-family: 'Raleway', serif"
+            >
               Product Launches
             </h4>
-            <p class="text-gray-600 text-center">
+            <p
+              class="text-gray-600 text-center"
+              style="font-family: 'Playfair Display', serif"
+            >
               Buzz-worthy events to give your product the spotlight it deserves.
             </p>
           </div>
@@ -547,14 +703,20 @@
           >
             <div class="mb-6 overflow-hidden rounded-xl">
               <img
-                src="./assets/images/promo4.jpg"
+                src="./assets/images/branding activation.jpg"
                 class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
               />
             </div>
-            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            <h4
+              class="text-xl font-bold text-gray-800 mb-2 text-center"
+              style="font-family: 'Raleway', serif"
+            >
               Brand Activation
             </h4>
-            <p class="text-gray-600 text-center">
+            <p
+              class="text-gray-600 text-center"
+              style="font-family: 'Playfair Display', serif"
+            >
               Interactive campaigns in malls, markets, and public spaces.
             </p>
           </div>
@@ -566,14 +728,20 @@
           >
             <div class="mb-6 overflow-hidden rounded-xl">
               <img
-                src="./assets/images/stafs.jpg"
+                src="./assets/images/support.jpg"
                 class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
               />
             </div>
-            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            <h4
+              class="text-xl font-bold text-gray-800 mb-2 text-center"
+              style="font-family: 'Raleway', serif"
+            >
               Promoters & Staffing
             </h4>
-            <p class="text-gray-600 text-center">
+            <p
+              class="text-gray-600 text-center"
+              style="font-family: 'Playfair Display', serif"
+            >
               Male/female promoters & MCs to elevate your brand presence.
             </p>
           </div>
@@ -589,10 +757,16 @@
                 class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
               />
             </div>
-            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            <h4
+              class="text-xl font-bold text-gray-800 mb-2 text-center"
+              style="font-family: 'Raleway', serif"
+            >
               Logistics & Compliance
             </h4>
-            <p class="text-gray-600 text-center">
+            <p
+              class="text-gray-600 text-center"
+              style="font-family: 'Playfair Display', serif"
+            >
               We handle transport, permissions, and event setup end-to-end.
             </p>
           </div>
@@ -608,10 +782,16 @@
                 class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
               />
             </div>
-            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            <h4
+              class="text-xl font-bold text-gray-800 mb-2 text-center"
+              style="font-family: 'Raleway', serif"
+            >
               Roadshow Branding
             </h4>
-            <p class="text-gray-600 text-center">
+            <p
+              class="text-gray-600 text-center"
+              style="font-family: 'Playfair Display', serif"
+            >
               Look Walkers, LED Vans & mobile campaigns that drive impact.
             </p>
           </div>
@@ -627,10 +807,16 @@
                 class="mx-auto transition-transform duration-500 group-hover:scale-110 rounded-xl"
               />
             </div>
-            <h4 class="text-xl font-bold text-gray-800 mb-2 text-center">
+            <h4
+              class="text-xl font-semibold text-gray-800 mb-2 text-center"
+              style="font-family: 'Raleway', serif"
+            >
               Auto Branding
             </h4>
-            <p class="text-gray-600 text-center">
+            <p
+              class="text-gray-600 text-center"
+              style="font-family: 'Playfair Display', serif"
+            >
               Turn vehicles into moving advertisements with stunning wraps.
             </p>
           </div>
@@ -638,12 +824,13 @@
       </div>
     </section>
 
-  
-
     <!-- Gallery Section -->
-    <div class="w-full h-6" id="gallery" ></div>
-    <section  class="py-20 px-6">
-      <div class="text-center mb-16">
+    <div class="w-full h-6" id="gallery"></div>
+    <section class="py-20 px-6">
+      <div
+        style="font-family: 'Playfair Display', serif"
+        class="text-center mb-16"
+      >
         <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
           Gallery
         </h2>
@@ -725,9 +912,12 @@
     </section>
 
     <!-- Contact Section -->
-     <div class="w-full h-6" id="contact" ></div>
-    <section  class="bg-white py-20 px-6 overflow-hidden">
-      <div class="text-center mb-16 overflow-hidden">
+    <div class="w-full h-6" id="contact"></div>
+    <section class="bg-white py-20 px-6 overflow-hidden">
+      <div
+        style="font-family: 'Playfair Display', serif"
+        class="text-center mb-16 overflow-hidden"
+      >
         <h2 class="text-4xl md:text-5xl font-light text-black tracking-wide">
           Contact Us
         </h2>
@@ -742,17 +932,13 @@
       <div
         class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start"
       >
-        
         <div class="space-y-8 text-left" data-aos="fade-right">
-          
           <img src="./assets/images/logo.jpg" alt="ADR Logo" class="h-14" />
 
-          
-          <h2 class="text-2xl md:text-3xl font-bold text-black">
+          <h2 class="text-2xl md:text-3xl font-bold text-black" style="font-family: 'Playfair Display', serif">
             WANT TO WORK WITH US?
           </h2>
 
-          
           <div class="flex items-start gap-4">
             <img
               src="./assets/images/call.png"
@@ -760,14 +946,13 @@
               class="h-8 w-8 mt-1"
             />
             <div>
-              <p class="uppercase text-sm tracking-wide text-gray-600">
+              <p class="uppercase text-sm tracking-wide text-gray-600" style="font-family: 'Playfair Display', serif">
                 Talk to our client support team
               </p>
-              <p class="text-xl font-semibold text-black">+91 7559064500</p>
+              <p class="text-xl font-semibold text-black" style="font-family: 'Playfair Display', serif">+91 7559064500</p>
             </div>
           </div>
 
-         
           <div class="flex items-start gap-4">
             <img
               src="./assets/images/email.png"
@@ -775,16 +960,15 @@
               class="h-8 w-8 mt-1"
             />
             <div>
-              <p class="uppercase text-sm tracking-wide text-gray-600">
+              <p class="uppercase text-sm tracking-wide text-gray-600" style="font-family: 'Playfair Display', serif">
                 Write to us about your needs
               </p>
-              <p class="text-md font-semibold text-black">
+              <p class="text-md font-semibold text-black" style="font-family: 'Playfair Display', serif">
                 santosh@adrevent.com
               </p>
             </div>
           </div>
 
-          
           <div class="flex items-center gap-4 mt-4">
             <a href="#" target="_blank">
               <img
@@ -818,32 +1002,31 @@
           </div>
         </div>
 
-        
         <div class="w-full" data-aos="fade-left">
           <form class="space-y-4">
             <input
               type="text"
               placeholder="Enter your Full Name"
-              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9c27b0]"
+              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]"
             />
             <input
               type="tel"
               placeholder="Enter your Phone Number"
-              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9c27b0]"
+              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]"
             />
             <input
               type="email"
               placeholder="Enter your Email ID"
-              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9c27b0]"
+              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]"
             />
             <textarea
               placeholder="Message"
               rows="4"
-              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9c27b0]"
+              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]"
             ></textarea>
             <button
               type="submit"
-              class="bg-[#673ab7] text-white font-semibold py-2 px-6 rounded-md hover:bg-[#5e35b1] transition duration-300"
+              class="bg-[#016db7] text-white font-semibold py-2 px-6 rounded-md hover:bg-[#5e35b1] transition duration-300" 
             >
               SUBMIT
             </button>
@@ -853,91 +1036,139 @@
     </section>
 
     <!-- Footer -->
-<footer class="bg-[#fffaf0] text-gray-800 py-14 px-6 tracking-wide">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer class="bg-[#fffaf0] text-gray-800 py-14 px-6 tracking-wide">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        <!-- Logo + About -->
+        <div>
+          <img
+            src="./assets/images/logo (2).png"
+            alt="ADR Events Logo"
+            class="h-12 mb-4"
+          />
+          <p class="md:text-lg text-sm leading-relaxed text-gray-600" style="font-family: 'Playfair Display', serif">
+            ADR Events crafts unforgettable brand moments with precision,
+            creativity, and passion for perfection.
+          </p>
+        </div>
 
-    <!-- Logo + About -->
-    <div>
-      <img src="./assets/images/logo (2).png" alt="ADR Events Logo" class="h-12 mb-4">
-      <p class="md:text-lg text-sm leading-relaxed text-gray-600">
-        ADR Events crafts unforgettable brand moments with precision, creativity, and passion for perfection.
-      </p>
-    </div>
+        <!-- Navigation -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-[#c5a14d]" style="font-family: 'Playfair Display', serif">Quick Links</h4>
+          <ul class="space-y-2 md:text-lg text-sm">
+            <li>
+              <a href="#home" class="hover:text-[#9b7d2c] transition" style="font-family: 'Playfair Display', serif">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="hover:text-[#9b7d2c] transition" style="font-family: 'Playfair Display', serif">About</a>
+            </li>
+            <li>
+              <a href="#services" class="hover:text-[#9b7d2c] transition" style="font-family: 'Playfair Display', serif"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#gallery" class="hover:text-[#9b7d2c] transition" style="font-family: 'Playfair Display', serif"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-[#9b7d2c] transition" style="font-family: 'Playfair Display', serif"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
 
-    <!-- Navigation -->
-    <div>
-      <h4 class="text-lg font-semibold mb-4 text-[#c5a14d]">Quick Links</h4>
-      <ul class="space-y-2 md:text-lg text-sm">
-        <li><a href="#home" class="hover:text-[#9b7d2c] transition">Home</a></li>
-        <li><a href="#about" class="hover:text-[#9b7d2c] transition">About</a></li>
-        <li><a href="#services" class="hover:text-[#9b7d2c] transition">Services</a></li>
-        <li><a href="#gallery" class="hover:text-[#9b7d2c] transition">Gallery</a></li>
-        <li><a href="#contact" class="hover:text-[#9b7d2c] transition">Contact</a></li>
-      </ul>
-    </div>
+        <!-- Contact Info with Images -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4 text-[#c5a14d]" style="font-family: 'Playfair Display', serif">Contact Us</h4>
+          <ul class="space-y-4 md:text-lg text-sm text-gray-700">
+            <li class="flex items-start gap-3" style="font-family: 'Playfair Display', serif">
+              <span>
+                <strong>Downtown:</strong><br />
+                Metro Pillar No.688, Near Shenoy’s<br />
+                M.G. Road, Ernakulam - 682035
+              </span>
+            </li>
 
-    <!-- Contact Info with Images -->
-    <div>
-      <h4 class="text-xl font-semibold mb-4 text-[#c5a14d]">Contact Us</h4>
-      <ul class="space-y-4 md:text-lg text-sm text-gray-700">
-        <li class="flex items-start gap-3">
-          <span>
-            <strong>Downtown:</strong><br>
-            Metro Pillar No.688, Near Shenoy’s<br>
-            M.G. Road, Ernakulam - 682035
-          </span>
-        </li>
+            <li class="flex items-start gap-3" style="font-family: 'Playfair Display', serif">
+              <span>
+                <strong>Godown:</strong><br />
+                63/353 Kaloor Kadavanthra Road<br />
+                Cochin - 682017
+              </span>
+            </li>
 
-        <li class="flex items-start gap-3">
+            <li class="flex items-center gap-3">
+              <img src="./assets/images/call.png" alt="Phone" class="w-5 h-5" />
+              <a href="tel:+917559064500" class="text-[#9b7d2c] hover:underline" 
+                >+91 7559064500</a
+              >
+            </li>
 
-          <span>
-            <strong>Godown:</strong><br>
-            63/353 Kaloor Kadavanthra Road<br>
-            Cochin - 682017
-          </span>
-        </li>
+            <li class="flex items-center gap-3">
+              <img
+                src="./assets/images/email.png"
+                alt="Email"
+                class="w-5 h-5"
+              />
+              <a
+                href="mailto:santosh@adrevent.com"
+                class="text-[#9b7d2c] hover:underline" style="font-family: 'Playfair Display', serif"
+                >santosh@adrevent.com</a
+              >
+            </li>
+          </ul>
+        </div>
 
-        <li class="flex items-center gap-3">
-          <img src="./assets/images/call.png" alt="Phone" class="w-5 h-5">
-          <a href="tel:+917559064500" class="text-[#9b7d2c] hover:underline">+91 7559064500</a>
-        </li>
-
-        <li class="flex items-center gap-3">
-          <img src="./assets/images/email.png" alt="Email" class="w-5 h-5">
-          <a href="mailto:santosh@adrevent.com" class="text-[#9b7d2c] hover:underline">santosh@adrevent.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Social Media with Images -->
-    <div>
-      <h4 class="text-xl font-semibold mb-4 text-[#c5a14d]">Follow Us</h4>
-      <div class="flex gap-4 items-center">
-        <a href="#" target="_blank">
-          <img src="./assets/images/instagram.png" alt="Instagram" class="w-7 h-7 hover:scale-110 transition">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./assets/images/facebook.jpg" alt="Facebook" class="w-7 h-7 hover:scale-110 transition">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./assets/images/whatsapp (1).png" alt="LinkedIn" class="w-7 h-7 hover:scale-110 transition">
-        </a>
-        <a href="#" target="_blank">
-          <img src="./assets/images/twitter.png" alt="Twitter" class="w-7 h-7 hover:scale-110 transition">
-        </a>
+        <!-- Social Media with Images -->
+        <div>
+          <h4 class="text-xl font-semibold mb-4 text-[#c5a14d]" style="font-family: 'Playfair Display', serif">Follow Us</h4>
+          <div class="flex gap-4 items-center">
+            <a href="#" target="_blank">
+              <img
+                src="./assets/images/instagram.png"
+                alt="Instagram"
+                class="w-7 h-7 hover:scale-110 transition"
+              />
+            </a>
+            <a href="#" target="_blank">
+              <img
+                src="./assets/images/facebook.jpg"
+                alt="Facebook"
+                class="w-7 h-7 hover:scale-110 transition"
+              />
+            </a>
+            <a href="#" target="_blank">
+              <img
+                src="./assets/images/whatsapp (1).png"
+                alt="LinkedIn"
+                class="w-7 h-7 hover:scale-110 transition"
+              />
+            </a>
+            <a href="#" target="_blank">
+              <img
+                src="./assets/images/twitter.png"
+                alt="Twitter"
+                class="w-7 h-7 hover:scale-110 transition"
+              />
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Divider -->
-  <div class="border-t border-[#e2d8bc] mt-12 pt-6 text-center text-sm text-gray-500">
-© <script>document.write(new Date().getFullYear())</script> ADR EVENTS. All rights reserved.<br><br><br>Designed by CYBEXEL PVT LTD  </div>
-    
-
-</footer>
-
-
-
+      <!-- Divider -->
+      <div
+        class="border-t border-[#e2d8bc] mt-12 pt-6 text-center text-sm text-gray-500" style="font-family: 'Playfair Display', serif"
+      >
+        ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        ADR EVENTS. All rights reserved.<br /><br /><br />Designed by CYBEXEL
+        PVT LTD
+      </div>
+    </footer>
 
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
