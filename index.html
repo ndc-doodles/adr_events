@@ -973,83 +973,42 @@
               </p>
             </div>
           </div>
-
-          <!-- <div class="flex items-center gap-4 mt-4">
-            <a href="#" target="_blank">
-              <img
-                src="./assets/images/instagram.png"
-                alt="Instagram"
-                class="h-8 w-8 hover:scale-110 transition"
-              />
-            </a>
-            <a href="#" target="_blank">
-              <img
-                src="./assets/images/whatsapp (1).png"
-                alt="YouTube"
-                class="h-8 w-8 hover:scale-110 transition"
-              />
-            </a>
-            <a href="#" target="_blank">
-              <img
-                src="./assets/images/facebook.jpg"
-                alt="Facebook"
-                class="h-8 w-8 hover:scale-110 transition"
-              />
-            </a>
-
-            <a href="#" target="_blank">
-              <img
-                src="./assets/images/twitter.png"
-                alt="Twitter"
-                class="h-8 w-8 hover:scale-110 transition"
-              />
-            </a>
-          </div> -->
         </div>
 
         <div class="w-full" data-aos="fade-left">
-          <form
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            class="space-y-4"
-          >
-            <input
-              type="hidden"
-              name="access_key"
-              value="430c8b55-b6ae-4e44-8cf7-23ac75ec1984"
-            />
+<form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
 
-            <input
-              type="text"
-              name="full_name"
-              placeholder="Enter your Full Name"
-              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]"
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Enter your Phone Number"
-              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your Email ID"
-              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]"
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              rows="4"
-              class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]"
-            ></textarea>
-            <button
-              type="submit"
-              class="bg-[#016db7] text-white font-semibold py-2 px-6 rounded-md hover:bg-[#5e35b1] transition duration-300"
-            >
-              SUBMIT
-            </button>
-          </form>
+      <input type="hidden" name="access_key" value="430c8b55-b6ae-4e44-8cf7-23ac75ec1984" />
+
+      <div>
+        <input type="text" id="name" name="full_name" placeholder="Enter your Full Name"
+               class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]" required />
+        <div class="text-red-600 text-sm mt-1" id="nameError"></div>
+      </div>
+
+      <div>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number"
+               class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]" required />
+        <div class="text-red-600 text-sm mt-1" id="phoneError"></div>
+      </div>
+
+      <div>
+        <input type="email" id="email" name="email" placeholder="Enter your Email ID"
+               class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]" required />
+        <div class="text-red-600 text-sm mt-1" id="emailError"></div>
+      </div>
+
+      <div>
+        <textarea id="message" name="message" placeholder="Message" rows="4"
+                  class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#016db7]" required></textarea>
+        <div class="text-red-600 text-sm mt-1" id="messageError"></div>
+      </div>
+
+      <button type="submit"
+              class="w-full bg-[#016db7] text-white font-semibold py-2 px-6 rounded-md hover:bg-[#5e35b1] transition duration-300">
+        SUBMIT
+      </button>
+    </form>
         </div>
       </div>
     </section>
